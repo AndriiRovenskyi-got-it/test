@@ -1,0 +1,38 @@
+.room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.video {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 10px;
+  width: 30%;
+  text-align: center;
+}
+
+.interaction-section {
+  margin-top: 20px;
+}
+
+.question-indicator {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+}

@@ -1,0 +1,18 @@
+<div class="room-container" *ngIf="room">
+  <h2>Room - {{roomId}}</h2>
+  <h2>User - {{userId}}</h2>
+  <div class="video-section">
+    <div *ngFor="let participant of room.participants" class="video">
+      <p>{{ participant.key }}</p>
+    </div>
+  </div>
+
+  <div class="interaction-section">
+    <p class="question-indicator">Черга питань: {{ room.currentParticipant }}</p>
+    <p class="question-indicator">Поточне питання: {{ room.currentQuestion }}</p>
+    <div *ngIf="room.currentParticipant == userId">
+      <textarea [(ngModel)]="questionText" placeholder="Введіть ваше питання тут..."></textarea>
+      <button (click)="submitQuestion()">Надіслати</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<h1>
+  List of rooms
+</h1>
+<div *ngFor="let room of rooms$ | async" class="video">
+  <p>Name: {{ room.key }}</p>
+  <p>Available: {{ room.availableParticipats }}</p>
+  <p>dfsdf</p>
+  <a *ngIf="room.availableParticipats > 0" [routerLink]="'../room/' + room.key">Join</a>
+</div>
+
+<button (click)="createRoom()">Create Room</button>
